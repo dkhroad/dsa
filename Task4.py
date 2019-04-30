@@ -49,23 +49,13 @@ for number in sorted(possible_telemarketers): #47
 
 
 """
-The Worst case time complexity is O(x + y log y), where x is size if texts
-list, and y is the size of calls list.
+The Worst case time complexity is O(n log n), where n is size of texts
+list and calls list combined. 
 
 Explanation:
-On line #32, the time complexity is O(x) + O(x) -> O(2x) -> O(x), where x is
-size of the texts list.
-On line #36, by the same reasoning, the time complexity is O(y), where y is the
-size of calls list.
-On line #41, the worst case time complexity of adding an item to a set of (possible
-size y is O(y) 
-On line #47, the time complexity is equal to the the sorting time complexy of
-list possible_telemarketers of max possible size y is O(y log y). The reasoning
-being, in the worst case scenario, if all callers are telemarketers, the size
-of possible_telemarketers list will be the same as the size of calls list.
-
-Combining all time complexities done serially: O(x + y +  y log y)
-Simplifying by dropping, the non-determinant term y: O(x + y log y)
+As sorting time will be more dominant for sufficiently large n, we can ignore
+the O(n) - the time to add items in the sets callers, callees and
+possible_telemarketers. 
 
 The time complexity of python operations are based on https://wiki.python.org/moin/TimeComplexity
 """

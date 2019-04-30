@@ -21,7 +21,7 @@ Print messages:
 """
 
 print("First record of texts, {0} texts {1} at time {2}".format(texts[0][0],texts[0][1],texts[0][2]))
-print("Last record of call, {0} calls {1} at time {2}".format(calls[-1][0],calls[-1][1],calls[-1][2]))
+print("Last record of calls, {0} calls {1} at time {2}, lasting {3} seconds".format(calls[-1][0],calls[-1][1],calls[-1][2],calls[-1][3]))
 
 
 """

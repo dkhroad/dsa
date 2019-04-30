@@ -26,14 +26,14 @@ def different_telephone_numbers(texts):
     """
     tel_numbers =  set()
     for t in texts:
-        tel_numbers.update(t[0],t[1])
+        tel_numbers.update([t[0],t[1]])
 
-    return  len(tel_numbers)
+    return  tel_numbers
 
 
-print("There are {0} different telephone numbers in the records.".
-      format(different_telephone_numbers(texts) + 
-             different_telephone_numbers(calls)));
+texts_set = different_telephone_numbers(texts)
+calls_set = different_telephone_numbers(calls)
+print("There are {0} different telephone numbers in the records.".format(len(texts_set.union(calls_set))));
 
 """ 
 Big O: O(x+y) 

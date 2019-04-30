@@ -72,7 +72,9 @@ for call in calls:                             #65
         if not area_code in called_area_codes:
             called_area_codes.append(area_code) #73
 
-print("The numbers called by people in Bangalore have codes:" ,sorted(called_area_codes)) # 75
+print("The numbers called by people in Bangalore have codes:")
+for area_code in sorted(called_area_codes): # 76
+    print(area_code)
 
 # part B
 print("{0:.2f} percent of calls from fixed lines in Bangalore are calls to other fixed lines in Bangalore.".format((total_local_calls/total_called) * 100))
@@ -91,7 +93,7 @@ The worst case time (amortized) complexity of adding a area_code to
 list. In the worst case, x could be same as n (size of the calls list); if,
 every number is called by Bangalore area code. 
 
-The time complexity of line #75 is time to sort the called_area_codes list that
+The time complexity of line #76 is time to sort the called_area_codes list that
 is assumed to be O(n log n). 
 
 Therefore, the total worst case time complexity of part A is: 1) time to add
