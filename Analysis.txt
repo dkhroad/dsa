@@ -1,0 +1,73 @@
+# Task0.py
+Big O analysis: O(1)
+
+As per https://wiki.python.org/moin/TimeComplexity, "Get item" time complexity
+There are 4 Python list lookup operations regardless of the input  size. 
+is  O(1). 
+
+Therefore, the worst case time will be: O(1)*4. The constant term 4 is non
+deteminant factor in the time analysis and can be dropped.  
+
+
+# Task1.py
+
+Big O: O(n) 
+n is the input size. 
+
+According to https://wiki.python.org/moin/TimeComplexity, the worst case 
+(amortized) time complexity of set time is O(n), where n is the size of a set/dictonary. 
+of a set lookup operation is same is dictionary lookup up operation. 
+Here,we add 2x objects to texts set and 2y objects to calls set.
+Therefore,ignoring the constant terms, worst cast time complexity will O(n) 
+ 
+# Task2.py
+Big O Analysis: O(n log n)
+
+According to https://wiki.python.org/moin/TimeComplexity, the worst case time complexity of
+adding an item to a dictionary is O(n) where n is the size of the dictionary. 
+Ignoring the non-dominiant constant term, we spend O(n) time population totals
+dictionary. 
+
+Sorting the dictionary takes O(n log n) time. Therefore, the full time
+complexity is: O(n + n log n). Solving further. 
+O(n(1+ log n))
+O(n log n) # dropping the constant term)
+
+In other words, sorting time is more dominant than time taken to add items in
+the dictionary.
+
+# Task3.py
+Big O Analysis for part A: O(n log n), where n is the size of calls list. 
+
+Explanation:
+Time complexity to  compute numbers called from fixed lines in Bangalore: O(n).
+The amount of work done in functions is_bangalore_number() and extract_code()
+is rougly constant and is equal to O(1), 
+
+The worst case time (amortized) complexity of adding a area_code to 
+'called_area_codes' list on line 73 is O(x), where x is the size of area_code
+list. In the worst case, x could be same as n (size of the calls list); if,
+every number is called by Bangalore area code. 
+
+The time complexity of line #76 is time to sort the called_area_codes list that
+is assumed to be O(n log n). 
+
+Therefore, the total worst case time complexity of part A is: 1) time to add
+area coded to the called_area_codes list, 2) time to sort the called_area_codes
+list. The total time complexity then is: O(n + n log n). That is asymptotically
+equal to O(n log n).
+
+for the part b, assuming the format call, multiplicaton and division takes a 
+constant amout of time; the time complexity is O(1).
+
+# Task4.py
+The Worst case time complexity is O(n log n), where n is size of texts
+list and calls list combined. 
+
+Explanation:
+As sorting time will be more dominant for sufficiently large n, we can ignore
+the O(n) - the time to add items in the sets callers, callees and
+possible_telemarketers. 
+
+The time complexity of python operations are based on https://wiki.python.org/moin/TimeComplexity
+
